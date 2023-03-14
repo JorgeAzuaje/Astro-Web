@@ -1,0 +1,107 @@
+/*Primero modifico el tamaño de las imagenes*/
+.imagen1{
+  width: 500px;
+  height: 350px;
+}
+
+.imagen2{
+  width: 500px;
+  height: 350px;
+}
+/*Aquí colocamos que tipo de letra queremos para nuestra pagina y el fondo*/ 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #F0F8FF;
+}
+/*Aquí modificamos el titulo poniendole un fondo y colocando cuanton queremos que avarque*/ 
+.titulo{
+  width: 100%;
+  background: #FFF8DC;
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 1px solid black;
+}
+/*Aquí colocamos el tamaño que queremos avarque la zona de los links*/ 
+.seccioninterna{
+  height: 250px;
+  line-height: 40px
+
+}
+/*Aquí colocamos el tamaño que queremos avarque la zona del contenido digital*/  
+.contenido{
+  height: 2200px;
+}
+/*Aquí colocamos el tamaño que queremos avarque la zona del pie de pagina y le cambiamos el fondo y lo centramos*/ 
+footer{
+  background-color: #ADD8E6;
+  color: black;
+  text-align: center;
+  height: 200px;
+  line-height: 50px;
+  border-top: 1px solid black;
+
+}
+/*De aqui en adelante modificamos los links para darle un buen diseño tanto a los links de los enlaces a videos externos como a los links de la propia pagina*/ 
+.enlaces-externos{
+  height: 450px;
+  float: left;
+  width: 45%;
+ 
+}
+
+iframe{
+  height: 450px;
+  float: left;
+  width: 55%;
+}
+
+.clearfix{
+  clear: both;
+}
+
+.centrar{
+  display: flex;
+  justify-content: center;
+}
+
+.seccioninterna a{
+  text-decoration: none;
+  color: #9400D3;
+  padding: 0 10px;
+}
+
+.seccioninterna a:hover{
+  color: #FFF8DC;
+  background-color: #A9A9A9;
+}
+
+.enlaces-externos a{
+  text-decoration: none;
+  color: #9400D3;
+  padding: 0 10px;
+}
+
+.enlaces-externos a:hover{
+  color: #FFF8DC;
+  background-color: #A9A9A9;
+}
+
+.volverinicio{
+  font-size: 50px;
+}
+/*Aqui modificamos el tamaño de los titulos*/
+b{
+  font-size: 25px;
+}
+/*Aqui le damos estilo a la tabla*/
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px;
+}
+
+
+
