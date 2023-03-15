@@ -12,7 +12,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 15%;
     gap: 5px;
     background-image: url(imgcomen/unifon.jpg);
     background-position: center center;
@@ -22,7 +22,7 @@ body{
 
 .contenedor{
     background-color: rgba(255,255,255,0.7);
-    width: 600px;
+    width: 35%;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ body{
 }
 
 .contenedor-2{
-    width: 600px;
+    width: 35%;
     height: auto;
     background-color: rgba(255,255,255,0.7);
     display: flex;
@@ -78,7 +78,7 @@ img{
 }
 
 .input-com{
-    width: 500px;
+    width: 100%;
     height: 100px;
     background: none;
     display: flex;
@@ -128,7 +128,7 @@ button{
 .close{
     font-size: 12px;
     position: absolute;
-    right: 600px;
+    right: 35%;
     width: 20px;
     z-index: 20;
     transition-duration: 200ms;
@@ -136,3 +136,50 @@ button{
     cursor: pointer;
     color: red;
 }
+
+/*Adaptamos la página para verse correctamente desde una tablet*/
+@media screen and (max-width: 915px){
+    .contenedor{
+        width: 65%;
+    }
+    .contenedor-2{
+        width: 65%;
+    }
+
+    .close{
+        right: 25%;
+    }
+   
+  }
+  /*Adaptamos la página para verse correctamente desde un celular*/
+  @media screen and (max-width: 540px) {
+    .contenedor{
+        width: 90%;
+    }
+    .contenedor-2{
+        width: 90%;
+    }
+
+    .close{
+        right: 15%;
+    }
+   
+    
+  }
+  
+  /*Adaptamos la página para que se vea mejor en un telefono muy delgado como lo puede ser un Galaxi Fold eliminando las imagenes*/
+  @media screen and (max-width: 280px){
+    .contenedor{
+        width: 95%;
+    }
+    .contenedor-2{
+        width: 95%;
+    }
+
+    .close{
+        right: 16%;
+        font-size: 8px;
+    }
+
+    
+  }
