@@ -30,17 +30,16 @@ body{
     font-size: 16px;
 }
 /*Colocamos la tabla en el medio, la centramos y le damos el tipo de letra*/
-table, th, td {
+ul, li {
     display: flex;
-    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    height: 33%;
+    height: auto;
     width: 100%;
-}
-
-td{
-    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    padding: 15px;
 }
 /*Le cambiamos el color a los links y le damos algo de interactividad*/
 .links a{
@@ -54,7 +53,47 @@ td{
     background-color: #A9A9A9;
   }
 
-url{
-    width: 100%;
-    height: 100%;
+.des{
+    display: flex;
+    text-align: center;
 }
+
+.menu > li{
+    float: left;
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+    min-width: 10px;
+    width: 90%;
+}
+
+.menu li:hover > ul{
+    display: block;
+}
+
+.menu{
+    width: 100%;
+}
+
+/*Adaptamos la página para verse correctamente desde una tablet*/
+@media screen and (max-width: 915px){
+    .menu li ul{
+        width: 87%;
+    }
+  }
+  /*Adaptamos la página para verse correctamente desde un celular*/
+  @media screen and (max-width: 540px) {
+    .menu li ul{
+        width: 73%;
+    }
+   
+  }
+  
+  /*Adaptamos la página para que se vea mejor en un telefono muy delgado como lo puede ser un Galaxi Fold eliminando las imagenes*/
+  @media screen and (max-width: 280px){
+    .menu li ul{
+        width: 60%;
+    }
+  }
