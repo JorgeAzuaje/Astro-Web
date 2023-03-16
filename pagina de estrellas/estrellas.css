@@ -6,7 +6,7 @@
   
   .imagen2{
     width: 500px;
-    height: auto;
+    height: 300px;
   }
 
   .imagen3{
@@ -81,14 +81,14 @@ iframe{
   
     .imagen2{
       width: 400px;
-      height: auto;
+      height: 250px;
     }
 
     .imagen3{
         width: 400px;
         height: auto;
     }
-    
+
   }
   /*Adaptamos la página para verse correctamente desde un celular*/
   @media screen and (max-width: 540px) {
@@ -107,14 +107,14 @@ iframe{
   
     .imagen2{
       width: 300px;
-      height: auto;
+      height: 275px;
     }
 
     .imagen3{
         width: 300px;
         height: auto;
     }
-    
+
   }
   
   /*Adaptamos la página para que se vea mejor en un telefono muy delgado como lo puede ser un Galaxi Fold eliminando las imagenes*/
@@ -130,6 +130,10 @@ iframe{
     .imagen3{
       width: 200px;
       height: auto;
+    }
+
+    .carrousel{
+      display: none;
     }
     
   }
@@ -180,4 +184,62 @@ table, th, td {
 
 th, td{
     padding: 10px;
+}
+
+
+/*Carrusel de imagenes*/
+
+.carrousel{
+  width: 100%;
+}
+
+.conteCarrousel{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.itemCarrousel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.itemCarrouselTarjeta{
+  width: 100%;
+  height: 100%;
+}
+
+.itemCarrouselArrows{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+  cursor: pointer;
+}
+
+.conteCarrouselController{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+  text-decoration: none;
+  font-size: 2em;
+  color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+  color: black;
 }
