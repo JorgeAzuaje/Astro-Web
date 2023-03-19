@@ -1,33 +1,75 @@
 /*Aqui colocamos el color de letra que queremos que tenga el cuerpo, el fondo y que este centrado*/
 body{
-    background-image: url(imgprin/unifon.jpg);
+    /*background-image: url(imgprin/unifon.jpg);*/
     color: white;
     display: flex;
     justify-content: center;
-}
-/*Definimos lo que queremos que habarque la seccion del titulo, el tipo de letra y lo centramos*/
-.titulo{
-    display: flex;
-    width: 100%;
-    height: 33%;
-    justify-content: center;
-    padding-top: 85px;
-    padding-bottom: 40px;
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-}
-/*Definimos lo que queremos que habarque la seccion del texto, el tipo de letra y lo centramos*/
-.texto{
-    display: flex;
-    width: 100%;
-    height: 33%;
-    justify-content: center;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+}
+/*Le damos estilos generales a todo el HTML*/
+*, 
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+/*Le damos estilos a todo el main*/
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+/*Le damos estilos a todas las secciones*/
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+section h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Le damos estilos a las secciones que no tendran el efecto parallax*/
+.no-parallax 
+{
+  background-color: #5333ed;
+  z-index: 999;
+}
+/*Le damos estilo a la seccion que tendra el efecto parallax*/
+.parallax h1 
+{
+  width: 60%;
+  font-size: 2rem;
+}
+
+.parallax::after 
+{
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after 
+{
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("./imgprin/unifon.jpg");
+  background-size: cover;
 }
 /*Colocamos la tabla en el medio, la centramos y le damos el tipo de letra*/
 ul, li {
@@ -65,8 +107,9 @@ ul, li {
 .menu li ul{
     display: none;
     position: absolute;
-    min-width: 10px;
-    width: 90%;
+    /*min-width: 10px;*/
+    width: 50%;
+    left: 25%;
 }
 
 .menu li:hover > ul{
@@ -75,18 +118,30 @@ ul, li {
 
 .menu{
     width: 100%;
+    background-color: #5333ed;
+    height: 800px;
 }
 
 /*Adaptamos la página para verse correctamente desde una tablet*/
 @media screen and (max-width: 915px){
     .menu li ul{
-        width: 87%;
+        width: 75%;
+        left: 13%;
+    }
+    .menu{
+        height: 1000px;
     }
   }
   /*Adaptamos la página para verse correctamente desde un celular*/
   @media screen and (max-width: 540px) {
     .menu li ul{
         width: 73%;
+    }
+    .menu{
+        height: 650px;
+    }
+    .parallax h1{
+        font-size: 25px;
     }
    
   }
@@ -95,5 +150,15 @@ ul, li {
   @media screen and (max-width: 280px){
     .menu li ul{
         width: 60%;
+    }
+
+    .parallax h1{
+        font-size: 20px;
+    }
+  }
+/*Adaptamos la página para que se vea mejor especificamente en un Nest Hub*/
+  @media screen and (max-width: 1024px) and (max-height: 600px){
+    .menu{
+        height: 400px;
     }
   }
